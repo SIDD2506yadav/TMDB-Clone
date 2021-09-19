@@ -1,0 +1,283 @@
+.movie {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.movie_intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.movie_details {
+    display: flex;
+    padding: 30px;
+}
+
+@media screen and (max-width: 900px) {
+    .movie_details {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.movie_details > img {
+    width: 300px;
+    height: 450px;
+    border-radius: 10px;
+}
+
+.movie_detail {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.movie_detail > h2 {
+    font-weight: 700;
+    font-size: 35px;
+    color: #fff;
+}
+
+.movie_detail > strong {
+    color: #fff;
+    font-weight: 400;
+}
+
+.movie_detail > b {
+    color: rgba(211, 211, 211, 0.486);
+}
+
+.movie_detail > strong > b {
+    margin-left: 3px;
+    margin-right: 3px;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.movie_circular_rating {
+    width: 75px;
+    height: 75px;
+}
+
+.movie_description {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.movie_description > h4 {
+    font-weight: 600;
+    color: #fff;
+}
+
+.movie_description > small {
+    color: #fff;
+    font-weight: 450;
+}
+
+.movie_directors {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.movie_directors > span {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    color: #fff;
+}
+
+.movie_directors > span > p {
+    font-weight: 300;
+    font-size: x-small;
+}
+
+.movie_left {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.movie_castDetails {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    /* max-width: 80%; */
+}
+
+.movie_castDetails > h3 {
+    color: #212529;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.movie_castList {
+    display: flex;
+    overflow-x: auto;
+}
+
+.movie_castActor {
+    display: flex;
+    flex-direction: column;
+    min-width: 150px;
+    width: 150px;
+    border-radius: 8px;
+    margin-right: 20px;
+    border: 1px solid lightgray;
+    margin-bottom: 20px;
+}
+
+.movie_castActor > img {
+    width: 150px;
+    min-width: 150px;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 15px;
+}
+
+.movie_castActor > a {
+    font-weight: 700;
+    margin-bottom: 0px;
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.movie_castActor > small {
+    margin-bottom: 20px;
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.movie_castActor > a:hover {
+    color: blue;
+}
+
+.movie_castAndStatus {
+    display: flex;
+}
+
+.movie_status {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    padding-top: 80px;
+}
+
+.movie_status > h3 {
+    color: #212529;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.movie_status > small {
+    margin-bottom: 20px;
+}
+
+.movie_scoreDetails {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.movie_scoreDetails > h6 {
+    color: #fff;
+    margin-left: 10px;
+    font-weight: 700;
+}
+
+.movie_circularProgressBar {
+    width: 60px;
+    height: 60px;
+}
+
+.movie_similarMovies {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    /* max-width: 80%; */
+}
+
+.movie_similarMovies > h3 {
+    color: #212529;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.similar_movieList {
+    display: flex;
+    overflow-x: auto;
+}
+
+.similarMovie {
+    display: flex;
+    flex-direction: column;
+    min-width: 150px;
+    width: 150px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.similarMovie > img {
+    width: 150px;
+    min-width: 150px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.movie_similarMovieScore {
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    z-index: 1;
+    margin-bottom: 15px;
+    margin-left: 10px;
+}
+
+.similarMovie > a {
+    font-weight: 700;
+    margin-bottom: 0px;
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+}
+
+.similarMovie > small {
+    margin-bottom: 20px;
+}
+
+.similarMovie > a:hover {
+    color: blue;
+}
+
+@media screen and (max-width: 1158px) {
+    .movie_castAndStatus {
+        flex-direction: column;
+    }
+
+    .movie_left {
+        width: 100%;
+    }
+
+    .movie_castDetails {
+        max-width: 100%;
+    }
+
+    .movie_status {
+        padding-top: 20px !important;
+    }
+
+    .movie_similarMovies {
+        width: 100%;
+        max-width: 100%;
+    }
+}

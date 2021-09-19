@@ -1,0 +1,123 @@
+.search {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.search > h3 {
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: 700;
+}
+.search_view {
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 1040px) {
+    .search_view {
+        flex-direction: column;
+    }
+    .search_left {
+        width: 100% !important;
+        margin-bottom: 20px;
+    }
+
+    .search_right {
+        padding: 0 !important;
+    }
+
+    .search_movieDetails > p {
+        height: 0;
+        max-height: 0;
+    }
+}
+
+.search_left {
+    display: flex;
+    flex-direction: column;
+    min-width: 258px;
+    margin-top: 15px;
+    width: 258px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid lightgray;
+}
+
+.search_left > h3 {
+    padding: 20px;
+    background-color: #212529;
+    color: #fff;
+    border-radius: 10px 10px 0 0;
+    margin-top: 0;
+}
+
+.search_left > small {
+    padding: 15px;
+    font-weight: 500;
+    margin-right: 0;
+    cursor: pointer;
+}
+
+.search_grayBackground {
+    background-color: lightgray;
+}
+
+.search_right {
+    padding: 15px;
+    /* height: calc(100vh - 88.4px); */
+}
+
+.search_movies {
+    display: flex;
+    flex-direction: column;
+    /* height: calc(100vh - 108.4px);
+    overflow-y: auto; */
+}
+
+.search_movies > button {
+    background-color: #212529;
+    color: #fff;
+    padding: 10px;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+}
+
+.search_movie {
+    display: flex;
+    height: 141px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+}
+
+.search_linkWrap {
+    text-decoration: none;
+    color: #000;
+}
+
+.search_movie > img {
+    width: 95px;
+    height: 141px;
+    border-radius: 10px 0 0 10px;
+    margin-right: 20px;
+}
+
+.search_movieDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.search_movieDetails > p {
+    font-size: 14px;
+    font-weight: 600;
+    max-height: 43px;
+    height: 43px;
+    overflow: hidden;
+}

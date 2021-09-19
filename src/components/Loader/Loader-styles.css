@@ -1,0 +1,22 @@
+.loader {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    margin: 20px;
+    align-self: center;
+    border-radius: 50%;
+    border: 3px solid #2125298c;
+    border-top: 3px solid #212529;
+    animation: circular 2s infinite;
+}
+
+@keyframes circular {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

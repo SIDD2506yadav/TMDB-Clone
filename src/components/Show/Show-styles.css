@@ -1,0 +1,315 @@
+.show {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.show_intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.show_details {
+    display: flex;
+    padding: 30px;
+}
+
+@media screen and (max-width: 900px) {
+    .show_details {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.show_details > img {
+    width: 300px;
+    height: 450px;
+    border-radius: 10px;
+}
+
+.show_detail {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.show_detail > h2 {
+    font-weight: 700;
+    font-size: 35px;
+    color: #fff;
+}
+
+.show_detail > strong {
+    color: #fff;
+    font-weight: 400;
+}
+
+.show_detail > b {
+    color: rgba(211, 211, 211, 0.486);
+}
+
+.show_detail > strong > b {
+    margin-left: 3px;
+    margin-right: 3px;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.show_circular_rating {
+    width: 75px;
+    height: 75px;
+}
+
+.show_description {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.show_description > h4 {
+    font-weight: 600;
+    color: #fff;
+}
+
+.show_description > small {
+    color: #fff;
+    font-weight: 450;
+}
+
+.show_circularProgressBar {
+    width: 60px;
+    height: 60px;
+}
+
+.show_directors {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.show_directors > span {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    color: #fff;
+}
+
+.show_directors > span > p {
+    font-weight: 300;
+    font-size: x-small;
+}
+
+.show_castDetails {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    max-width: 80%;
+    width: 80%;
+}
+
+.show_castDetails > h3 {
+    color: #212529;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.show_castList {
+    display: flex;
+    overflow-x: auto;
+}
+
+.show_castActor {
+    display: flex;
+    flex-direction: column;
+    min-width: 150px;
+    width: 150px;
+    border-radius: 8px;
+    margin-right: 20px;
+    border: 1px solid lightgray;
+    margin-bottom: 20px;
+}
+
+.show_castActor > img {
+    width: 150px;
+    min-width: 150px;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 15px;
+}
+
+.show_castActor > a {
+    font-weight: 700;
+    margin-bottom: 0px;
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.show_castActor > small {
+    margin-bottom: 20px;
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.show_castActor > a:hover {
+    color: blue;
+}
+
+.show_castAndStatus {
+    display: flex;
+}
+
+@media screen and (max-width: 1158px) {
+    .show_castAndStatus {
+        flex-direction: column;
+    }
+
+    .show_castDetails {
+        max-width: 100%;
+    }
+
+    .show_status {
+        padding-top: 20px !important;
+    }
+}
+
+.show_status {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    padding-top: 80px;
+}
+
+.show_status > h3 {
+    color: #212529;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.show_status > small {
+    margin-bottom: 20px;
+}
+
+.show_scoreDetails {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.show_scoreDetails > h6 {
+    color: #fff;
+    margin-left: 10px;
+    font-weight: 700;
+}
+
+.show_seasons {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+}
+
+.show_seasons > h4 {
+    font-weight: 700;
+    margin-bottom: 20px !important;
+}
+
+.show_season {
+    display: flex;
+    height: 195px;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+    margin-bottom: 20px;
+}
+
+.show_season_list {
+    display: flex;
+    flex-direction: column;
+}
+
+.show_season > img {
+    width: 130px !important;
+    /* height: 195px; */
+    width: auto;
+    border-radius: 10px 0 0 10px;
+    margin-right: 20px;
+}
+
+.show_seasonDetails {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.show_seasonDetails > p {
+    max-height: 50px;
+    overflow: hidden;
+}
+
+.show_season_name {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.show_season_name > h5 {
+    font-weight: 700;
+}
+
+.show_similarShows {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    /* max-width: 80%; */
+}
+
+.show_similarShows > h3 {
+    color: #212529;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.similar_showList {
+    display: flex;
+    overflow-x: auto;
+}
+
+.similarShow {
+    display: flex;
+    flex-direction: column;
+    min-width: 150px;
+    width: 150px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.similarShow > img {
+    width: 150px;
+    min-width: 150px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.similarShow > a {
+    font-weight: 700;
+    margin-bottom: 0px;
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+}
+
+.similarShow > small {
+    margin-bottom: 20px;
+}
+
+.similarShow > a:hover {
+    color: blue;
+}

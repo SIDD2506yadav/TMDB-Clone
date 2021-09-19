@@ -1,0 +1,46 @@
+.navbar_searchBox {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid lightgray;
+}
+
+@keyframes showSearchBox {
+    from {
+        height: 0px;
+    }
+    to {
+        height: 100%;
+    }
+}
+
+.navbar_searchBox > input {
+    width: 100%;
+    outline: none;
+    border: none;
+    height: 100%;
+}
+
+.navbar_crossIcon {
+    color: #fff;
+    cursor: pointer;
+    display: inline;
+}
+
+.navbar_searchIcon {
+    color: #fff;
+    cursor: pointer;
+}
+
+.navbar_searchNotShown {
+    display: none;
+}
+
+.navbar_sendSearch {
+    cursor: pointer;
+}
+
+.navbar_searchCross {
+    margin-left: 10px;
+    cursor: pointer;
+}
