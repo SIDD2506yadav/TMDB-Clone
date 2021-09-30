@@ -43,13 +43,13 @@ export const PopularMovies = ({ type, title, category }) => {
                                 />
                             </span>
                             {movie.title ? (
-                                <a href={`/movie/${movie?.id}`}>
+                                <p>
                                     <strong>{movie?.title}</strong>
-                                </a>
+                                </p>
                             ) : (
-                                <a href={`/movie/${movie?.id}`}>
+                                <p>
                                     <strong>{movie?.name}</strong>
-                                </a>
+                                </p>
                             )}
                             {movie.release_date ? (
                                 <small>{movie?.release_date}</small>

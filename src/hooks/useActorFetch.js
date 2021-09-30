@@ -4,8 +4,8 @@ import API from "../API";
 
 const initialState = {};
 
-export const useActorFetch = () => {
-    const [actorId, setActorId] = useState("");
+export const useActorFetch = (actorId) => {
+    // const [actorId, setActorId] = useState("");
     const [state, setState] = useState(initialState);
 
     const fetchActor = async () => {
@@ -24,7 +24,6 @@ export const useActorFetch = () => {
     }, [actorId]);
 
     return {
-        setActorId,
         state,
     };
 };

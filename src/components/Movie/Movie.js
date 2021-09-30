@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useMovieFetch } from "../../hooks/useMovieFetch";
 import { BACKDROP_SIZE, POSTER_SIZE, IMAGE_BASE_URL } from "../../config";
 import { convertMoney } from "../../Helpers";
@@ -38,23 +38,28 @@ export const Movie = () => {
                         <h3>Cast</h3>
                         <div className="movie_castList">
                             {state?.actors?.map((actor) => (
-                                <div
-                                    className="movie_castActor"
-                                    key={actor?.id}
+                                <Link
+                                    to={`/actor/${actor?.id}`}
+                                    className="link_tag"
                                 >
-                                    <img
-                                        src={
-                                            actor?.profile_path
-                                                ? `${IMAGE_BASE_URL}${POSTER_SIZE}${actor.profile_path}`
-                                                : no_image
-                                        }
-                                        alt={actor?.name}
-                                    />
-                                    <a href={`/actor/${actor?.id}`}>
-                                        <strong>{actor?.name}</strong>
-                                    </a>
-                                    <small>{actor?.character}</small>
-                                </div>
+                                    <div
+                                        className="movie_castActor"
+                                        key={actor?.id}
+                                    >
+                                        <img
+                                            src={
+                                                actor?.profile_path
+                                                    ? `${IMAGE_BASE_URL}${POSTER_SIZE}${actor.profile_path}`
+                                                    : no_image
+                                            }
+                                            alt={actor?.name}
+                                        />
+                                        <p>
+                                            <strong>{actor?.name}</strong>
+                                        </p>
+                                        <small>{actor?.character}</small>
+                                    </div>
+                                </Link>
                             ))}
                         </div>
                     </div>
@@ -62,27 +67,37 @@ export const Movie = () => {
                         <h3>Similar Movies</h3>
                         <div className="similar_movieList">
                             {state?.similar?.results?.map((similarMovie) => (
-                                <div className="similarMovie">
-                                    <img
-                                        src={
-                                            similarMovie.poster_path
-                                                ? `${IMAGE_BASE_URL}${POSTER_SIZE}${similarMovie?.poster_path}`
-                                                : no_image
-                                        }
-                                        alt=""
-                                    />
-                                    <span className="movie_similarMovieScore">
-                                        <CircularScore
-                                            percentage={Math.floor(
-                                                similarMovie?.vote_average * 10,
-                                            )}
+                                <Link
+                                    to={`/movie/${similarMovie?.id}`}
+                                    className="link_tag"
+                                >
+                                    <div className="similarMovie">
+                                        <img
+                                            src={
+                                                similarMovie.poster_path
+                                                    ? `${IMAGE_BASE_URL}${POSTER_SIZE}${similarMovie?.poster_path}`
+                                                    : no_image
+                                            }
+                                            alt=""
                                         />
-                                    </span>
-                                    <a href={`/movie/${similarMovie?.id}`}>
-                                        <strong>{similarMovie?.title}</strong>
-                                    </a>
-                                    <small>{similarMovie?.release_date}</small>
-                                </div>
+                                        <span className="movie_similarMovieScore">
+                                            <CircularScore
+                                                percentage={Math.floor(
+                                                    similarMovie?.vote_average *
+                                                        10,
+                                                )}
+                                            />
+                                        </span>
+                                        <p>
+                                            <strong>
+                                                {similarMovie?.title}
+                                            </strong>
+                                        </p>
+                                        <small>
+                                            {similarMovie?.release_date}
+                                        </small>
+                                    </div>{" "}
+                                </Link>
                             ))}
                         </div>
                     </div>

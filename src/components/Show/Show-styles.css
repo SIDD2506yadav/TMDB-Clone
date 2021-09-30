@@ -140,7 +140,7 @@
     margin-bottom: 15px;
 }
 
-.show_castActor > a {
+.show_castActor > p {
     font-weight: 700;
     margin-bottom: 0px;
     text-decoration: none;
@@ -155,7 +155,7 @@
     font-size: 14px;
 }
 
-.show_castActor > a:hover {
+.show_castActor > p:hover {
     color: blue;
 }
 
@@ -298,7 +298,7 @@
     border-radius: 8px;
 }
 
-.similarShow > a {
+.similarShow > p {
     font-weight: 700;
     margin-bottom: 0px;
     text-decoration: none;

@@ -6,11 +6,7 @@ import "./Actor-styles.css";
 
 export const Actor = () => {
     const { actorId } = useParams();
-    const { setActorId, state } = useActorFetch();
-
-    useEffect(() => {
-        setActorId(actorId);
-    }, [actorId]);
+    const { state } = useActorFetch(actorId);
 
     console.log(state);
 

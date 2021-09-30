@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useShowFetch } from "../../hooks/useShowFetch";
 import { BACKDROP_SIZE, POSTER_SIZE, IMAGE_BASE_URL } from "../../config";
 import no_image from "../../assets/no_image.jpg";
@@ -33,20 +33,25 @@ export const Show = () => {
                     <h3>Cast</h3>
                     <div className="show_castList">
                         {state?.actors?.map((actor) => (
-                            <div className="show_castActor" key={actor.id}>
-                                <img
-                                    src={
-                                        actor.profile_path
-                                            ? `${IMAGE_BASE_URL}${POSTER_SIZE}${actor.profile_path}`
-                                            : no_image
-                                    }
-                                    alt={actor?.name}
-                                />
-                                <a href={`/actor/${actor.id}`}>
-                                    <strong>{actor?.name}</strong>
-                                </a>
-                                <small>{actor?.character}</small>
-                            </div>
+                            <Link
+                                to={`/actor/${actor.id}`}
+                                className="link_tag"
+                            >
+                                <div className="show_castActor" key={actor.id}>
+                                    <img
+                                        src={
+                                            actor.profile_path
+                                                ? `${IMAGE_BASE_URL}${POSTER_SIZE}${actor.profile_path}`
+                                                : no_image
+                                        }
+                                        alt={actor?.name}
+                                    />
+                                    <p>
+                                        <strong>{actor?.name}</strong>
+                                    </p>
+                                    <small>{actor?.character}</small>
+                                </div>
+                            </Link>
                         ))}
                     </div>
                 </div>
@@ -62,20 +67,22 @@ export const Show = () => {
                 <h3>Similar Shows</h3>
                 <div className="similar_showList">
                     {state?.similar?.results.map((similarMovie) => (
-                        <div className="similarShow">
-                            <img
-                                src={
-                                    similarMovie.poster_path
-                                        ? `${IMAGE_BASE_URL}${POSTER_SIZE}${similarMovie.poster_path}`
-                                        : no_image
-                                }
-                                alt=""
-                            />
-                            <a href={`/movie/${similarMovie?.id}`}>
-                                <strong>{similarMovie?.title}</strong>
-                            </a>
-                            <small>{similarMovie?.release_date}</small>
-                        </div>
+                        <Link to={`/show/${similarMovie.id}`}>
+                            <div className="similarShow">
+                                <img
+                                    src={
+                                        similarMovie.poster_path
+                                            ? `${IMAGE_BASE_URL}${POSTER_SIZE}${similarMovie.poster_path}`
+                                            : no_image
+                                    }
+                                    alt=""
+                                />
+                                <a href={`/movie/${similarMovie?.id}`}>
+                                    <strong>{similarMovie?.title}</strong>
+                                </a>
+                                <small>{similarMovie?.release_date}</small>
+                            </div>
+                        </Link>
                     ))}
                 </div>
             </div>

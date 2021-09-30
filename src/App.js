@@ -22,7 +22,7 @@ function App() {
                 <Route path="/show/:showId">
                     <Show />
                 </Route>
-                <Route path="/actor/:actorId">
+                <Route exact path="/actor/:actorId">
                     <Actor />
                 </Route>
                 <Route path="/search">

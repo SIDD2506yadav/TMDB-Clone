@@ -59,7 +59,7 @@
     margin-left: 10px;
 }
 
-.popularMovies_movie a {
+.popularMovies_movie p {
     font-weight: 700;
     margin-bottom: 0px;
     text-decoration: none;
@@ -70,6 +70,6 @@
 .popularMovies_movie small {
     margin-bottom: 20px;
 }
-.popularMovies_movie a:hover {
+.popularMovies_movie p:hover {
     color: blue;
 }

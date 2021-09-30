@@ -140,7 +140,7 @@
     margin-bottom: 15px;
 }
 
-.movie_castActor > a {
+.movie_castActor > p {
     font-weight: 700;
     margin-bottom: 0px;
     text-decoration: none;

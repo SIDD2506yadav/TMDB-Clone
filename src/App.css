@@ -9,6 +9,11 @@ body {
     font-family: "Source Sans Pro", sans-serif;
 }
 
+.link_tag {
+    text-decoration: none;
+    color: #000;
+}
+
 /* width */
 ::-webkit-scrollbar {
     width: 0px;
